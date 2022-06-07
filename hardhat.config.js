@@ -18,4 +18,18 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
+    owner: {
+      default: 1,
+    },
+    caller: {
+      default: 2,
+    },
+    holder: {
+      default: 3,
+    },
+  },
 };

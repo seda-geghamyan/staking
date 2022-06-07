@@ -12,4 +12,12 @@ contract EXIO is ERC20 {
     function mint(address _address, uint256 _amount) external {
         _mint(_address, _amount);
     }
+
+    function _transferFrom(address from, address to, uint256 amount) external {
+        _transfer(from, to, amount);
+    }
+
+    function getAddress() view public returns(address){
+       return address(this);
+    }
 }
